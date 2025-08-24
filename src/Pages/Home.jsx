@@ -178,7 +178,7 @@ export default function Home() {
     <section id="third_sec">
       <div className="tringel_sec_three"></div>
 
-      <h1 id='add_boutique_invite'>Et Numirique Boutique Pour Les TFC</h1>
+      <h1 id='add_boutique_invite'>Et Numirique Boutique Pour Les TCF</h1>
 
       <div id="separator_sec_three">
 
@@ -223,3 +223,4 @@ export default function Home() {
 
   )
 }
+
