@@ -18,7 +18,7 @@ export default function Home() {
     },
     {
       question: "De quelle manière accompagnez-vous les candidats au TCF ?",
-      answer: "nous proposons un service de prise de rendez-vous pour le TCF, afin de vous simplifier toutes les démarches administratives. D’autre part, nous mettons à votre disposition des articles numériques de préparation au TCF, conçus pour vous aider à réviser efficacement et à comprendre le format du test. Découvrez notre sélection d'articles de préparation spécialement conçus pour le TCF dans notre boutique en ligne <p>👉 Accéder à notre boutique</p>"
+      answer: `nous proposons un service de prise de rendez-vous pour le TCF, afin de vous simplifier toutes les démarches administratives. D’autre part, nous mettons à votre disposition des articles numériques de préparation au TCF, conçus pour vous aider à réviser efficacement et à comprendre le format du test. Découvrez notre sélection d'articles de préparation spécialement conçus pour le TCF dans notre boutique en ligne <p><a href="">👉 Accéder à notre boutique</a></p>`
     },
     {
       question: "Quelle est votre politique de retour ?",
@@ -74,7 +74,7 @@ export default function Home() {
 <svg id='bg_sec_two' xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
 
   
-  <rect width="100%" height="100%" fill="#124367"/>
+  <rect width="100%" height="100%" fill="#2c3b4e"/>
 
   <defs>
     
@@ -178,7 +178,7 @@ export default function Home() {
     <section id="third_sec">
       <div className="tringel_sec_three"></div>
 
-      <h1 id='add_boutique_invite'>Et Numirique Boutique Pour Les TCF</h1>
+      <h1 id='add_boutique_invite'>Et Numirique Boutique Pour Les TFC</h1>
 
       <div id="separator_sec_three">
 
@@ -188,7 +188,10 @@ export default function Home() {
           
            <div id="faq_ques" className="faq-container">
   {faqs.map((faq, index) => (
-    <div key={index} className="faq-item">
+    <div
+      key={index}
+      className={`faq-item ${openIndex === index ? "open" : ""}`}
+    >
       <div
         className="faq-question"
         onClick={() => toggleFAQ(index)}
@@ -198,12 +201,16 @@ export default function Home() {
           +
         </span>
       </div>
-      <div className={`faq-answer ${openIndex === index ? "open" : ""}`}>
-        {faq.answer}
-      </div>
+
+      <div
+        className={`faq-answer ${openIndex === index ? "open" : ""}`}
+        dangerouslySetInnerHTML={{ __html: faq.answer }}
+      ></div>
     </div>
   ))}
 </div>
+
+
 
 
 
@@ -223,4 +230,3 @@ export default function Home() {
 
   )
 }
-
