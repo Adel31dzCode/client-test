@@ -10,11 +10,12 @@ html {
 }
 @font-face {
   font-family: myFirstFont;
-  src: url('../src/Fonts/Gilmer\ Bold.otf');
+  src: url('./Fonts/Gilmer_Bold.otf');
 }
 
 :root {
     --main-color: #124367;
     --main-font: myFirstFont;
     --second-font: 'Poppins', sans-serif;
+
 }
